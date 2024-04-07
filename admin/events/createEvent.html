@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Form</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="../../css/admin/styles.css" rel="stylesheet" />
+        <script
+      src="https://use.fontawesome.com/releases/v6.3.0/js/all.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="sb-nav-fixed">
+    <script id="replace_with_navbar" src="/scripts/admin/adminNav.js"></script>
+    <div class="container" style="margin-top:100px">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <h2 class="mb-4">Create Event</h2>
+          <form id="create-event-form">
+            <div class="mb-3">
+              <label for="title" class="form-label">Title:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="title"
+                name="title"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="teamSize" class="form-label">Team Size:</label>
+              <input
+                type="number"
+                class="form-control"
+                id="teamSize"
+                name="teamSize"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="regStartDate" class="form-label"
+                >Registration Date and Time:</label
+              >
+              <input
+                type="datetime-local"
+                class="form-control"
+                id="regStartDate"
+                name="regStartDate"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="regEndDate" class="form-label"
+                >End Date and Time:</label
+              >
+              <input
+                type="datetime-local"
+                class="form-control"
+                id="regEndDate"
+                name="regEndDate"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="eventDate" class="form-label"
+                >Event Date and Time:</label
+              >
+              <input
+                type="datetime-local"
+                class="form-control"
+                id="eventDate"
+                name="eventDate"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="venue" class="form-label">Venue:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="venue"
+                name="venue"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="imageUri" class="form-label">Image URL:</label>
+              <input
+                type="url"
+                class="form-control"
+                id="imageUri"
+                name="imageUri"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="description" class="form-label">Description:</label>
+              <textarea
+                class="form-control"
+                id="description"
+                name="description"
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+          <div
+            id="success-message"
+            class="mt-3 d-none alert alert-success"
+            role="alert"
+          >
+            Event created successfully!
+          </div>
+          <div
+            id="error-message"
+            class="mt-3 alert alert-danger d-none"
+            role="alert"
+          ></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS (optional if you need it) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+    <script type="module" src="/scripts/admin/event/createEvent.js"></script>
+    <script  src="/scripts/admin/scripts.js"></script>
+
+  </body>
+</html>
