@@ -9,6 +9,7 @@ async function submitForm(event, form, authToken) {
     event.preventDefault(); // Prevent default form submission
 
     const formData = new FormData(form);
+    console.log(formData)
 
     const data = {};
     formData.forEach((value, key) => {

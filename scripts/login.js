@@ -1,5 +1,6 @@
 import axios from "axios";
-const BASE_URL = "http://localhost:7000/";
+import {BASE_URL} from "./main.js";
+
 const url = BASE_URL + "api/v1/auth/adminLogin";
 console.log(url);
 
