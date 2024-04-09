@@ -16,7 +16,7 @@ async function createUserCard(url, headers, contentElementId) {
 
     data.forEach((user) => {
       const cardDiv = document.createElement("div");
-      cardDiv.classList.add("card");
+      cardDiv.classList.add("card", "m-3");
       const cardBody = document.createElement("div");
       cardBody.classList.add("card-body");
       const nameElem = document.createElement("p");
@@ -34,7 +34,7 @@ async function createUserCard(url, headers, contentElementId) {
       editBtn.innerText = "edit";
       editBtn.href = `/admin/users/editUser?id=${user._id}`
       const deleteBtn = document.createElement("button");
-      deleteBtn.classList.add("btn");
+      deleteBtn.classList.add("btn", "m-2");
       deleteBtn.classList.add("btn-danger");
       deleteBtn.textContent = "delete";
       deleteBtn.value = user._id;
