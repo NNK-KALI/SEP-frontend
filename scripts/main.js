@@ -1,4 +1,4 @@
-const BASE_URL = "https://athlete-meet-backend.onrender.com";
+const BASE_URL = "https://athlete-meet-backend.onrender.com/";
 
 function getAuthToken() {
   const token = localStorage.getItem("athmeetApiKey");
